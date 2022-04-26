@@ -1,4 +1,6 @@
 *
+
 !.gitsecret
-!*.secret
 .gitsecret/keys/random_seed
+.gitsecret/keys/*~
+!*.secret
