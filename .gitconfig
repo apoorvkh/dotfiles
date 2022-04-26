@@ -1,0 +1,19 @@
+[user]
+	name = apoorvkh
+	email = apoorv.khand@gmail.com
+	signingkey = E436428F4FBF9123
+[init]
+	defaultBranch = main
+[color]
+        ui = auto
+        status=auto
+        branch=auto
+        interactive=auto
+        diff=auto
+[core]
+        excludesFile = ~/.gitignore_global
+        editor = nano
+[commit]
+	gpgSign = true
+[tag]
+	gpgSign = true

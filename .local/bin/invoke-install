@@ -1,0 +1,6 @@
+#!/bin/env zsh
+read "yn?Are you sure that you want to install your dotfiles to $@? (y/n) "
+
+if [ "$yn" = "y" ]; then
+    ssh $@ 'bash -s' < ~/.local/bootstrap.sh;
+fi

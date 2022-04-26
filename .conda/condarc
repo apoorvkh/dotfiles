@@ -1,0 +1,11 @@
+auto_update_conda: false
+auto_activate_base: true
+channels:
+  - pytorch
+  - nvidia
+  - huggingface
+  - conda-forge
+  - defaults
+show_channel_urls: true
+env_dirs:
+  - ~/envs
