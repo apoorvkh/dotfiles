@@ -2,5 +2,5 @@
 read "yn?Are you sure that you want to install your dotfiles to $@? (y/n) "
 
 if [ "$yn" = "y" ]; then
-    ssh $@ 'bash -s' < ~/.local/bootstrap.sh;
+    ssh $@ 'wget https://raw.githubusercontent.com/apoorvkh/dotfiles/main/.local/bootstrap.sh -O - | sh';
 fi

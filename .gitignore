@@ -1,15 +1,16 @@
 *
 !/.*
 
-.bash*
-.git-credentials
-.profile
-.python_history
-.sudo_as_admin_successful
-.wget-hsts
-.zcompdump-*
-.zsh_history
+/.bash*
+/.git-credentials
+/.profile
+/.python_history
+/.sudo_as_admin_successful
+/.wget-hsts
+/.zcompdump-*
+/.zsh_history
 
 !/.gitsecret
-!*.secret
 /.gitsecret/keys/random_seed
+/.gitsecret/keys/*~
+!*.secret
