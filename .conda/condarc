@@ -7,5 +7,5 @@ channels:
   - conda-forge
   - defaults
 show_channel_urls: true
-env_dirs:
-  - ~/envs
+envs:
+  - ~/.local/miniconda3/envs

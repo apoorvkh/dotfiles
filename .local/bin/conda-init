@@ -2,7 +2,7 @@
 __conda_setup="$($HOME/.local/miniconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
-    export CONDA_ENVS_PATH="$HOME/envs"
+    export CONDA_ENVS_PATH="$HOME/.local/miniconda3/envs"
 
     if (( $+commands[mamba] )); then
         functions[conda_]=$functions[conda]
