@@ -1,5 +1,7 @@
 alias rm="command rm -rf"
-alias ls="command ls -lh --color=auto"
+alias ls="command ls -lhH --color=auto"
+alias mkdir="command mkdir -p"
+alias symlink="command ln -s"
 alias df="command df -h --type btrfs --type ext4 --type ext3 --type ext2 --type vfat --type iso9660 --type xfs --type fuseblk"
 alias du="command du -h"
 alias free="command free -h"
