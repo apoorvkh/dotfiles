@@ -6,8 +6,6 @@ export PATH=$HOME/.local/miniconda3/bin:$PATH
 conda install mamba git -c conda-forge --yes
 
 # .dotfiles
-touch ~/.ssh/known_hosts
-ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
 git init
 git remote add origin https://github.com/apoorvkh/dotfiles.git
 git fetch
