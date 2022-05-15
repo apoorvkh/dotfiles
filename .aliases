@@ -1,4 +1,5 @@
 alias rm="command rm -rf"
+alias cp="command cp -R"
 alias ls="command ls -lhH --color=auto"
 alias mkdir="command mkdir -p"
 alias symlink="command ln -s"
