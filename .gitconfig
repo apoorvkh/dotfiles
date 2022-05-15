@@ -4,16 +4,14 @@
 	signingkey = E436428F4FBF9123
 [init]
 	defaultBranch = main
-[color]
-        ui = auto
-        status=auto
-        branch=auto
-        interactive=auto
-        diff=auto
 [core]
         excludesFile = ~/.gitignore_global
         editor = nano
+[pull]
+        rebase = false
 [commit]
 	gpgSign = true
 [tag]
 	gpgSign = true
+[credential]
+	helper = store
