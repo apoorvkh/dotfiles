@@ -1,19 +1,39 @@
 *
-!/.*
+!/.**
+
+# Common dotfiles
+/.bash_history
+/.bash_logout
+/.bashrc
+/.cache/
+
+/.conda/environments.txt
+
+/.config/
+/.git-credentials
+/.gnupg
+/.huggingface/
+
+/.local/share/
+/.local/miniconda3/
+
+/.profile
+/.python_history
+
+/.ssh
+!/.ssh/config
+!/.ssh/id_*.pub
+!/.ssh/authorized_keys2
+
+/.sudo_as_admin_successful
+/.wget-hsts
+/.zsh/oh-my-zsh/
+/.zcompdump-*
+/.zsh_history
+
+# Git secrets
 
 !/.gitsecret
 /.gitsecret/keys/random_seed
 /.gitsecret/keys/*~
 !*.secret
-
-# Dotfiles to ignore
-/.bash_history
-/.bash_logout
-/.bashrc
-/.git-credentials
-/.profile
-/.python_history
-/.sudo_as_admin_successful
-/.wget-hsts
-/.zcompdump-*
-/.zsh_history
