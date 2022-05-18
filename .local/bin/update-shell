@@ -1,18 +1,21 @@
 #!/usr/bin/env zsh
 
-git -C ~ pull --no-rebase
+if [[ git -C ~ pull --no-rebase ]]; then
 
-if [[ $(uname -s) = "Linux" ]]; then
-    export CONDA_BASE_YAML=~/.conda/base.yml
-elif [[ $(uname -s) = "Darwin" ]]; then
-    export CONDA_BASE_YAML=~/.conda/base-osx.yml
-fi
+    if [[ $(uname -s) = "Linux" ]]; then
+        export CONDA_BASE_YAML=~/.conda/base.yml
+    elif [[ $(uname -s) = "Darwin" ]]; then
+        export CONDA_BASE_YAML=~/.conda/base-osx.yml
+    fi
 
-# Update conda base if environment file changed
-command conda compare -n base $CONDA_BASE_YAML -q &> /dev/null
-if [[ $? == 1 ]]; then
-    echo "Updating conda environment..."
-    conda env update --prefix ~/.local/miniconda3 --file $CONDA_BASE_YAML --prune
-    conda clean --all --quiet --yes
-    bash ~/.conda/condabin_symlinks.sh
+    # Update conda base if environment file changed
+    command conda compare -n base $CONDA_BASE_YAML -q &> /dev/null
+    if [[ $? == 1 ]]; then
+        echo "Updating conda environment..."
+        conda env update --prefix ~/.local/miniconda3 --file $CONDA_BASE_YAML --prune
+        conda clean --all --quiet --yes
+        bash ~/.conda/condabin_symlinks.sh
+        source ~/.local/bin/save-conda-base
+    fi
+
 fi
