@@ -1,15 +1,18 @@
-#!/bin/env zsh
+#!/usr/bin/env zsh
 
-git -C ~ pull
+git -C ~ pull --no-rebase
+
+if [[ $(uname -s) = "Linux" ]]; then
+    export CONDA_BASE_YAML=~/.conda/base.yml
+elif [[ $(uname -s) = "Darwin" ]]; then
+    export CONDA_BASE_YAML=~/.conda/base-osx.yml
+fi
 
 # Update conda base if environment file changed
-# "conda compare" not implemented in mamba
-command conda compare -n base ~/.conda/base.yml -q &> /dev/null
+command conda compare -n base $CONDA_BASE_YAML -q &> /dev/null
 if [[ $? == 1 ]]; then
-    read "yn?Install new updates for your conda base environment? (y/n) "
-    if [ "$yn" = "y" ]; then
-        conda env update --prefix ~/.local/miniconda3 --file ~/.conda/base.yml --prune
-        conda clean --all --quiet --yes
-        source ~/.conda/condabin_symlinks.sh
-    fi
+    echo "Updating conda environment..."
+    conda env update --prefix ~/.local/miniconda3 --file $CONDA_BASE_YAML --prune
+    conda clean --all --quiet --yes
+    bash ~/.conda/condabin_symlinks.sh
 fi

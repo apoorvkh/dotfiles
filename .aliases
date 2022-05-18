@@ -14,10 +14,6 @@ alias ps-owner="ps -o user= -p"
 alias local-ip="hostname -I"
 alias public-ip="curl http://checkip.amazonaws.com"
 
-alias export-conda-base="conda env export --name base"
-alias save-conda-base="export-conda-base > ~/.conda/base.yml"
-alias ls-conda-envs="conda info --envs"
-
 alias ipynb-to-md="jupyter nbconvert --to markdown"
 alias ipynb-to-html="jupyter nbconvert --to html"
 alias ipynb-to-pdf="jupyter nbconvert --to pdf"

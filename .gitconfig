@@ -7,6 +7,7 @@
 [core]
         excludesFile = ~/.gitignore_global
         editor = nano
+        precomposeunicode = false
 [pull]
         rebase = false
 [commit]
@@ -15,3 +16,4 @@
 	gpgSign = true
 [credential]
 	helper = store
+
