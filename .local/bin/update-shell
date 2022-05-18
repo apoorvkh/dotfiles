@@ -1,6 +1,9 @@
 #!/usr/bin/env zsh
 
-if [[ git -C ~ pull --no-rebase ]]; then
+git -C ~ fetch
+git -C ~ merge
+
+if [[ $? -eq 0 ]]; then
 
     if [[ $(uname -s) = "Linux" ]]; then
         export CONDA_BASE_YAML=~/.conda/base.yml
