@@ -9,7 +9,7 @@ COMPLETION_WAITING_DOTS="true"
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 ZSH_CUSTOM="$HOME/.zsh/custom"
 
-plugins=(command-not-found cp ssh-agent gpg-agent git git-prompt pip python sudo tmux screen ubuntu docker docker-compose)
+plugins=(command-not-found cp ssh-agent gpg-agent git git-prompt pip python sudo screen ubuntu docker docker-compose)
 zstyle :omz:plugins:ssh-agent agent-forwarding yes
 
 source $ZSH/oh-my-zsh.sh
