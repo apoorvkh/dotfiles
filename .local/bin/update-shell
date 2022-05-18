@@ -13,7 +13,7 @@ if [[ $? -eq 0 ]]; then
 
     # Update conda base if environment file changed
     command conda compare -n base $CONDA_BASE_YAML -q &> /dev/null
-    if [[ $? -eq 0 ]]; then
+    if [[ $? == 1 ]]; then
         echo "Updating conda environment..."
         conda env update --prefix ~/.local/miniconda3 --file $CONDA_BASE_YAML --prune
         conda clean --all --quiet --yes

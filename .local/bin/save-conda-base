@@ -7,5 +7,4 @@ elif [[ $(uname -s) = "Darwin" ]]; then
 fi
 
 conda env export --name base > $CONDA_BASE_YAML
-grep -v '^prefix:' $CONDA_BASE_YAML > $CONDA_BASE_YAML
-
+sed -i '/prefix:/d' $CONDA_BASE_YAML
