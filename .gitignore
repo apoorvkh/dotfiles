@@ -1,7 +1,23 @@
 *
 !/.**
 
+# GPG & SSH
+
+/.gnupg/
+!/.gnupg/gpg.conf
+
+/.ssh
+!/.ssh/config
+!/.ssh/id_*.pub
+!/.ssh/authorized_keys2
+
+## .local
+
+/.local/share
+/.local/miniconda3
+
 # Common dotfiles
+/.ai2thor/
 /.bash_history
 /.bash_logout
 /.bashrc
@@ -9,24 +25,12 @@
 /.conda/environments.txt
 /.config/
 /.git-credentials
-
-/.gnupg/
-!/.gnupg/gpg.conf
-
 /.huggingface/
-
-/.local/share/
-/.local/miniconda3/
-
+/.nv/
 /.profile
 /.python_history
-
-/.ssh
-!/.ssh/config
-!/.ssh/id_*.pub
-!/.ssh/authorized_keys2
-
 /.sudo_as_admin_successful
+/.vscode-server/
 /.wget-hsts
 /.zsh/oh-my-zsh/
 /.zcompdump-*
