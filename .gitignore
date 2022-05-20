@@ -5,6 +5,7 @@
 
 /.gnupg/
 !/.gnupg/gpg.conf
+!/.gnupg/pubring.kbx
 
 /.ssh
 !/.ssh/config
@@ -50,4 +51,4 @@
 !/.gitsecret
 /.gitsecret/keys/random_seed
 /.gitsecret/keys/*~
-!*.secret
+!**.secret
