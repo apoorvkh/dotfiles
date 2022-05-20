@@ -9,7 +9,10 @@
 /.conda/environments.txt
 /.config/
 /.git-credentials
-/.gnupg
+
+/.gnupg/
+!/.gnupg/gpg.conf
+
 /.huggingface/
 
 /.local/share/
