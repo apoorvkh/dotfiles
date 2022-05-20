@@ -8,6 +8,9 @@ alias du="command du -h"
 alias free="command free -h"
 alias sort="command sort -h"
 
+alias hide-secrets="git secret hide -FPm"
+alias reveal-secrets="git secret reveal -fP"
+
 alias ns="nvidia-smi"
 alias ps-owner="ps -o user= -p"
 
