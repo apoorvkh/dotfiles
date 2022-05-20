@@ -17,24 +17,33 @@
 /.local/miniconda3
 
 # Common dotfiles
+
 /.ai2thor/
 /.bash_history
 /.bash_logout
 /.bashrc
+/.bash_sessions/
 /.cache/
+/.CFUserTextEncoding
 /.conda/environments.txt
 /.config/
+/.docker/
 /.git-credentials
 /.huggingface/
+/.lesshst
+/.matplotlib/
 /.nv/
 /.profile
 /.python_history
 /.sudo_as_admin_successful
+/.viminfo
+/.vscode/
 /.vscode-server/
 /.wget-hsts
 /.zsh/oh-my-zsh/
 /.zcompdump-*
 /.zsh_history
+/.zsh_sessions/
 
 # Git secrets
 
