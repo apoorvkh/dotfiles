@@ -3,11 +3,20 @@
 __conda_setup="$($HOME/.local/miniconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
+
+    # Environment variables
+
+    if [[ $(uname -s) = "Linux" ]]; then
+        export CONDA_BASE_YAML=~/.conda/base.yml
+    elif [[ $(uname -s) = "Darwin" ]]; then
+        export CONDA_BASE_YAML=~/.conda/base-osx.yml
+    fi
+
     export CONDA_ENVS_PATH=~/.local/miniconda3/envs
 
+    # Refer to mamba as conda
     if (( $+commands[mamba] )); then
         functions[conda_]=$functions[conda]
-
         conda() {
             if [ $# -gt 0 ] && ([ $1 = "activate" ] || [ $1 = "deactivate" ])
                 then conda_ $@
@@ -15,5 +24,6 @@ if [ $? -eq 0 ]; then
             fi
         }
     fi
+
 fi
 unset __conda_setup

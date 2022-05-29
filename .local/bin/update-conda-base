@@ -1,11 +1,5 @@
 #!/usr/bin/env zsh
 
-if [[ $(uname -s) = "Linux" ]]; then
-    export CONDA_BASE_YAML=~/.conda/base.yml
-elif [[ $(uname -s) = "Darwin" ]]; then
-    export CONDA_BASE_YAML=~/.conda/base-osx.yml
-fi
-
 # Update conda base if environment file changed
 command conda compare -n base $CONDA_BASE_YAML -q &> /dev/null
 if [[ $? == 1 ]]; then

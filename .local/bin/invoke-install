@@ -1,3 +1,0 @@
-#!/usr/bin/env zsh
-
-ssh $@ 'curl -fsSL https://raw.githubusercontent.com/apoorvkh/dotfiles/main/.local/install.sh | bash -s --'

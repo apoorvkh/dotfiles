@@ -1,0 +1,22 @@
+{
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "zsh"
+        },
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "terminal.integrated.profiles.osx": {
+        "zsh": {
+            "path": "zsh"
+        },
+        "bash": {
+            "path": "bash",
+            "icon": "terminal-bash"
+        },
+    },
+    "terminal.integrated.defaultProfile.osx": "zsh",
+}

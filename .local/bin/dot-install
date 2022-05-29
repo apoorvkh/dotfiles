@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+
+ssh $@ 'curl -fsSL install.apoorvkh.com | bash -s --'

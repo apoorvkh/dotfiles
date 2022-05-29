@@ -1,10 +1,4 @@
 #!/usr/bin/env zsh
 
-if [[ $(uname -s) = "Linux" ]]; then
-    export CONDA_BASE_YAML=~/.conda/base.yml
-elif [[ $(uname -s) = "Darwin" ]]; then
-    export CONDA_BASE_YAML=~/.conda/base-osx.yml
-fi
-
 conda env export --name base > $CONDA_BASE_YAML
-sed -i '/prefix:/d' $CONDA_BASE_YAML
+sed -i '/prefix:/d' $CONDA_BASE_YAML # TODO: doesn't work on Mac

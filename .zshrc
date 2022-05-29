@@ -23,4 +23,10 @@ export GPG_TTY=$(tty)
 source $HOME/.aliases
 source $HOME/.local/bin/conda-init
 
+#
+
 [[ ! -f ~/.zsh/p10k.zsh ]] || source ~/.zsh/p10k.zsh
+
+autoload -Uz quote-and-complete-word
+zle -N quote-and-complete-word
+bindkey '\t' quote-and-complete-word

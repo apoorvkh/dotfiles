@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-git -C ~ pull
+dot pull
 
 if [[ $? -eq 0 ]]; then
     source ~/.local/bin/update-conda-base
