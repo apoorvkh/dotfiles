@@ -1,0 +1,6 @@
+#!/usr/bin/env zsh
+
+gpg --import "~/.gnupg/exports/mail@apoorvkh.com.pub.asc"
+gpg --import "~/.gnupg/exports/mail@apoorvkh.com.priv.asc"
+gpg --import "~/.gnupg/exports/mail@apoorvkh.com.sub_priv.asc"
+gpg --import "~/.gnupg/exports/ownertrust.txt"
