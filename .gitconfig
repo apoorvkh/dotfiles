@@ -1,6 +1,6 @@
 [user]
 	name = apoorvkh
-	email = apoorv.khand@gmail.com
+	email = mail@apoorvkh.com
 	signingkey = E436428F4FBF9123
 [init]
 	defaultBranch = main
@@ -16,4 +16,4 @@
 	gpgSign = true
 [credential]
 	helper = store
-
+	
