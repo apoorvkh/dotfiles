@@ -1,4 +1,4 @@
 #!/usr/bin/env zsh
 
 conda env export --name base > $CONDA_BASE_YAML
-sed -i '/prefix:/d' $CONDA_BASE_YAML # TODO: doesn't work on Mac
+perl -i -pe's/prefix: (.*)//g' $CONDA_BASE_YAML
