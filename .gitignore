@@ -51,4 +51,5 @@
 !/.gitsecret
 /.gitsecret/keys/random_seed
 /.gitsecret/keys/*~
+/.gitsecret/keys/tofu.db
 !**.secret
