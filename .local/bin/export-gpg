@@ -2,7 +2,7 @@
 
 mkdir "~/.gnupg/exports"
 
-gpg --export --armor mail@apoorvkh.com > "~/.gnupg/exports/mail@apoorvkh.com.pub.asc"                                                                               02:23:13 AM
-gpg --export-secret-keys --armor mail@apoorvkh.com > "~/.gnupg/exports/mail@apoorvkh.com.priv.asc"                                                                  02:23:45 AM
-gpg --export-secret-subkeys --armor mail@apoorvkh.com > "~/.gnupg/exports/mail@apoorvkh.com.sub_priv.asc"                                                        02:24:40 AM
-gpg --export-ownertrust > "~/.gnupg/exports/ownertrust.txt"
+gpg --export --armor mail@apoorvkh.com > ~/.gnupg/exports/mail@apoorvkh.com.pub.asc
+gpg --export-secret-keys --armor mail@apoorvkh.com > ~/.gnupg/exports/mail@apoorvkh.com.priv.asc
+gpg --export-secret-subkeys --armor mail@apoorvkh.com > ~/.gnupg/exports/mail@apoorvkh.com.sub_priv.asc
+gpg --export-ownertrust > ~/.gnupg/exports/ownertrust.txt
