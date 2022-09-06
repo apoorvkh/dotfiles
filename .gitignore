@@ -28,6 +28,7 @@
 /.CFUserTextEncoding
 /.conda/environments.txt
 /.config/
+/.DS_Store
 /.docker/
 /.git-credentials
 /.huggingface/
@@ -53,3 +54,4 @@
 /.gitsecret/keys/*~
 /.gitsecret/keys/tofu.db
 !**.secret
+.aws/credentials
