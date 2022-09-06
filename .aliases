@@ -11,6 +11,7 @@ alias slnk="ln -s"
 alias curl="command curl -fsSL"
 
 alias dot="git -C ~"
+alias add-secret="git secret add"
 alias hide-secrets="git secret hide -FPm"
 alias reveal-secrets="git secret reveal -fP"
 
