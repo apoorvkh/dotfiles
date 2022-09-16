@@ -1,0 +1,9 @@
+#!/usr/bin/env zsh
+
+scp ~/.gnupg/exports/ownertrust.txt $@:~/.gnupg/exports
+scp ~/.gnupg/exports/mail@apoorvkh.com.priv.asc $@:~/.gnupg/exports
+scp ~/.gnupg/exports/mail@apoorvkh.com.pub.asc $@:~/.gnupg/exports
+scp ~/.gnupg/exports/mail@apoorvkh.com.sub_priv.asc $@:~/.gnupg/exports
+
+ssh -t $@ "~/.local/miniconda3/bin/zsh -ic '~/.local/bin/import-gpg'"
+ssh $@ "rm ~/.gnupg/exports/ownertrust.txt ~/.gnupg/exports/mail@apoorvkh.com.priv.asc ~/.gnupg/exports/mail@apoorvkh.com.pub.asc ~/.gnupg/exports/mail@apoorvkh.com.sub_priv.asc"
