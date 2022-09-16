@@ -14,6 +14,7 @@ alias dot="git -C ~"
 alias add-secret="git secret add"
 alias hide-secrets="git secret hide -FPm"
 alias reveal-secrets="git secret reveal -fP"
+alias clear-secrets="rm \$(git secret list) && rm .gnupg && git restore .gnupg"
 
 alias ns="nvidia-smi"
 alias ps-owner="ps -o user= -p"
