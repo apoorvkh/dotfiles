@@ -2,6 +2,15 @@
 
 cd ~
 
+## Add authorized key
+
+if grep -Fxq "ssh-ed25519" <<< "$(ssh -Q key)"
+then
+    curl https://raw.githubusercontent.com/apoorvkh/dotfiles/main/.ssh/id_ed25519.pub >> ~/.ssh/authorized_keys
+else
+    curl https://raw.githubusercontent.com/apoorvkh/dotfiles/main/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+fi
+
 ## Install conda
 
 if [[ "$(uname -s)" == 'Linux' ]]; then

@@ -1,4 +1,4 @@
-alias rm="command rm -rf"
+alias rm="command rm -rf --one-file-system"
 alias cp="command cp -R"
 alias ls="command ls -lhH --color=auto"
 alias lsa="ls -a"
@@ -7,13 +7,13 @@ alias df="command df -h --type btrfs --type ext4 --type ext3 --type ext2 --type 
 alias du="command du -sh"
 alias free="command free -h"
 alias sort="command sort -h"
-alias slnk="ln -s"
 alias curl="command curl -fsSL"
 
 alias dot="git -C ~"
 alias add-secret="git secret add"
 alias hide-secrets="git secret hide -FPm"
 alias reveal-secrets="git secret reveal -fP"
+alias clear-secrets="rm \$(git secret list) && rm .gnupg && git restore .gnupg"
 
 alias ns="nvidia-smi"
 alias ps-owner="ps -o user= -p"
