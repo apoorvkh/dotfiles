@@ -28,6 +28,7 @@
 /.CFUserTextEncoding
 /.conda/environments.txt
 /.config/
+/.cups/
 /.DS_Store
 /.docker/
 /.git-credentials
