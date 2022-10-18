@@ -32,6 +32,9 @@
 /.docker/
 /.git-credentials
 /.huggingface/
+/.ipython/
+/.jupyter/
+/.keras/
 /.lesshst
 /.matplotlib/
 /.nv/
