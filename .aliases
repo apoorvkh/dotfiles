@@ -1,4 +1,4 @@
-alias rm="command rm -rf"
+alias rm="command rm -rf --one-file-system"
 alias cp="command cp -R"
 alias ls="command ls -lhH --color=auto"
 alias lsa="ls -a"
@@ -7,7 +7,6 @@ alias df="command df -h --type btrfs --type ext4 --type ext3 --type ext2 --type 
 alias du="command du -sh"
 alias free="command free -h"
 alias sort="command sort -h"
-alias slnk="ln -s"
 alias curl="command curl -fsSL"
 
 alias dot="git -C ~"

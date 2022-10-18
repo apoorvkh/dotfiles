@@ -14,8 +14,9 @@
 
 ## .local
 
-/.local/share
-/.local/miniconda3
+/.local/share/
+/.local/miniconda3/
+/.local/machine/
 
 # Common dotfiles
 
@@ -42,8 +43,9 @@
 /.vscode/
 /.vscode-server/
 /.wget-hsts
+/.Xauthority
 /.zsh/oh-my-zsh/
-/.zcompdump-*
+/.zcompdump*
 /.zsh_history
 /.zsh_sessions/
 
