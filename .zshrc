@@ -18,8 +18,12 @@ export PATH=$HOME/.local/machine/bin:$HOME/.local/bin:$PATH
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
 
+export NLTK_DATA=$HOME/.cache/nltk_data
+
 source $HOME/.aliases
 source $HOME/.local/bin/conda-init
+
+source $HOME/.local/machine/rc
 
 #
 
@@ -28,7 +32,3 @@ source $HOME/.local/bin/conda-init
 autoload -Uz quote-and-complete-word
 zle -N quote-and-complete-word
 bindkey '\t' quote-and-complete-word
-
-#
-
-source $HOME/.local/machine/rc

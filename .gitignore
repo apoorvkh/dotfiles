@@ -15,7 +15,7 @@
 ## .local
 
 /.local/share/
-/.local/miniconda3/
+/.local/miniconda3
 /.local/machine/
 
 # Common dotfiles
