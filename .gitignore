@@ -14,8 +14,9 @@
 
 ## .local
 
-/.local/share
+/.local/share/
 /.local/miniconda3
+/.local/machine/
 
 # Common dotfiles
 
@@ -28,10 +29,14 @@
 /.CFUserTextEncoding
 /.conda/environments.txt
 /.config/
+/.cups/
 /.DS_Store
 /.docker/
 /.git-credentials
 /.huggingface/
+/.ipython/
+/.jupyter/
+/.keras/
 /.lesshst
 /.matplotlib/
 /.nv/
@@ -42,8 +47,9 @@
 /.vscode/
 /.vscode-server/
 /.wget-hsts
+/.Xauthority
 /.zsh/oh-my-zsh/
-/.zcompdump-*
+/.zcompdump*
 /.zsh_history
 /.zsh_sessions/
 
