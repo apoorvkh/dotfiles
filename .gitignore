@@ -36,6 +36,7 @@
 /.huggingface/
 /.lesshst
 /.matplotlib/
+/.modulelog.log
 /.nv/
 /.profile
 /.python_history
