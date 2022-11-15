@@ -1,6 +1,10 @@
 #!/usr/bin/env zsh
 
-__conda_setup="$($HOME/.local/miniconda3/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
+CONDA_DIR="${1:=$HOME/.local/miniconda3}"
+
+echo $CONDA_DIR
+
+__conda_setup="$($CONDA_DIR/bin/conda 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 
@@ -12,7 +16,7 @@ if [ $? -eq 0 ]; then
         export CONDA_BASE_YAML=~/.conda/base-osx.yml
     fi
 
-    export CONDA_ENVS_PATH=~/.local/miniconda3/envs
+    export CONDA_ENVS_PATH=$CONDA_DIR/envs
 
     # Refer to mamba as conda
     if (( $+commands[mamba] )); then
