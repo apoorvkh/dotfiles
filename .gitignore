@@ -34,8 +34,12 @@
 /.docker/
 /.git-credentials
 /.huggingface/
+/.ipython/
+/.jupyter/
+/.keras/
 /.lesshst
 /.matplotlib/
+/.modulelog.log
 /.nv/
 /.profile
 /.python_history
@@ -58,4 +62,4 @@
 /.gitsecret/keys/tofu.db
 !**.secret
 .aws/credentials
-.duo/
+/.secrets/

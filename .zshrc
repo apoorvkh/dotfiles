@@ -18,11 +18,17 @@ export PATH=$HOME/.local/machine/bin:$HOME/.local/scripts:$HOME/.local/bin:$PATH
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
 
-export NLTK_DATA=$HOME/.cache/nltk_data
-
 source $HOME/.aliases
-source $HOME/.local/bin/conda-init
 
+load_env() {
+    source $HOME/.local/bin/conda-init $1/.local/miniconda3
+    export NLTK_DATA=$1/.cache/nltk_data
+    export HF_HOME=$1/.cache/huggingface
+}
+
+load_env $HOME
+
+export PATH=$HOME/.local/machine/bin:$PATH
 source $HOME/.local/machine/rc
 
 #
