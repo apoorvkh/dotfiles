@@ -11,19 +11,21 @@ parser.add_argument('--duo-path', type=str, default='~/.secrets/duo')
 parser.add_argument('--profile', type=str, default='brown')
 args = parser.parse_args()
 
-file_token = os.path.join(
+with open(os.path.join(
     os.path.expanduser(args.duo_path),
     f'{args.profile}.hotp'
-)
-
-f = open(file_token, "r+")
-secret = f.readline()[0:-1]
-offset = f.tell()
-count = int(f.readline())
+), 'r') as token_file:
+    secret = token_file.readline().strip()
 
 hotp = pyotp.HOTP(secret)
-print(hotp.at(count))
 
-f.seek(offset)
-f.write(str(count + 1))
-f.close()
+with open(os.path.join(
+    os.path.expanduser(args.duo_path),
+    f'{args.profile}.counter'
+), 'r+') as counter_file:
+    count = int(counter_file.readline())
+    print(hotp.at(count))
+    #
+    counter_file.seek(0)
+    counter_file.write(str(count+1))
+    counter_file.truncate()
