@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH=$HOME/.local/machine/bin:$HOME/.local/bin:$PATH
+export PATH=$HOME/.local/machine/bin:$HOME/.local/scripts:$HOME/.local/bin:$PATH
 export LANG=en_US.UTF-8
 export GPG_TTY=$(tty)
 

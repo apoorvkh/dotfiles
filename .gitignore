@@ -58,3 +58,4 @@
 /.gitsecret/keys/tofu.db
 !**.secret
 .aws/credentials
+.duo/
