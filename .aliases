@@ -1,4 +1,4 @@
-alias rm="command rm -rfx"
+alias rm="command rm -rf"
 alias cp="command cp -R"
 alias ls="command ls -lhH --color=auto"
 alias lsa="ls -a"
