@@ -1,4 +1,5 @@
 export ZSH="$HOME/.zsh/oh-my-zsh"
+export ZSH_COMPDUMP="$HOME/.cache/zcompdump-$HOST"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"
