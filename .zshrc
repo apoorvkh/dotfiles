@@ -1,4 +1,5 @@
 export ZSH="$HOME/.zsh/oh-my-zsh"
+export ZSH_COMPDUMP="$HOME/.cache/zcompdump-$HOST"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 HYPHEN_INSENSITIVE="true"
@@ -22,8 +23,8 @@ source $HOME/.aliases
 
 load_env() {
     source $HOME/.local/bin/conda-init $1/.local/miniconda3
-    export NLTK_DATA=$1/.cache/nltk_data
-    export HF_HOME=$1/.cache/huggingface
+    export NLTK_DATA=${2:-$1}/.cache/nltk_data
+    export HF_HOME=${2:-$1}/.cache/huggingface
 }
 
 load_env $HOME
