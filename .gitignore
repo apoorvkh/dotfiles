@@ -63,3 +63,4 @@
 !**.secret
 .aws/credentials
 /.secrets/
+.netrc
