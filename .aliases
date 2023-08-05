@@ -1,26 +1,28 @@
+alias c="clear"
+alias d="docker"
+alias g="git"
+alias n="nvidia-smi"
+alias ps-owner="ps -o user= -p"
+
+# Standard bash commands
 alias rm="command rm -rf"
 alias cp="command cp -R"
 alias ls="command ls -lhH --color=auto"
 alias lsa="ls -a"
 alias mkdir="command mkdir -p"
+alias grep="command grep --color=auto"
 alias df="command df -h --type btrfs --type ext4 --type ext3 --type ext2 --type vfat --type iso9660 --type xfs --type fuseblk"
 alias du="command du -sh"
 alias free="command free -h"
 alias sort="command sort -h"
 alias curl="command curl -fsSL"
 
-alias dot="git -C ~"
-alias add-secret="git secret add"
-alias hide-secrets="git secret hide -FPm"
-alias reveal-secrets="git secret reveal -fP"
-alias clear-secrets="rm \$(git secret list) && rm .gnupg && git restore .gnupg"
+# Network
+if [[ "$(uname -s)" == 'Linux' ]]; then
+    alias local-ip="hostname -I"
+elif [[ "$(uname -s)" == 'Darwin' ]]; then
+    alias local-ip="ipconfig getifaddr en0"
+fi
+alias public-ip="curl https://checkip.amazonaws.com"
 
-alias ns="nvidia-smi"
-alias ps-owner="ps -o user= -p"
-
-alias local-ip="hostname -I"
-alias public-ip="curl http://checkip.amazonaws.com"
-
-alias ipynb-to-md="jupyter nbconvert --to markdown"
-alias ipynb-to-html="jupyter nbconvert --to html"
-alias ipynb-to-pdf="jupyter nbconvert --to pdf"
+alias ports="netstat -tulan"
