@@ -1,4 +1,0 @@
-#!/usr/bin/env zsh
-
-conda env export --name base > $CONDA_BASE_YAML
-perl -i -pe's/prefix: (.*)//g' $CONDA_BASE_YAML
