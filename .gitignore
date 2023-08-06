@@ -1,22 +1,16 @@
 *
 !/.**
 
-# GPG & SSH
-
-/.gnupg/
-!/.gnupg/gpg.conf
-!/.gnupg/pubring.kbx
+# SSH
 
 /.ssh
+!/.ssh/authorized_keys
 !/.ssh/config
 !/.ssh/id_*.pub
-!/.ssh/authorized_keys2
 
 ## .local
 
 /.local/share/
-/.local/miniconda3
-/.local/machine/
 
 # Common dotfiles
 

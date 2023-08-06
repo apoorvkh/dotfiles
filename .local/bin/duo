@@ -1,0 +1,31 @@
+#!/usr/bin/env python
+
+import pyotp
+import sys
+import os.path
+import argparse
+
+
+parser = argparse.ArgumentParser()
+parser.add_argument('--duo-path', type=str, default='~/.secrets/duo')
+parser.add_argument('--profile', type=str, default='brown')
+args = parser.parse_args()
+
+with open(os.path.join(
+    os.path.expanduser(args.duo_path),
+    f'{args.profile}.hotp'
+), 'r') as token_file:
+    secret = token_file.readline().strip()
+
+hotp = pyotp.HOTP(secret)
+
+with open(os.path.join(
+    os.path.expanduser(args.duo_path),
+    f'{args.profile}.counter'
+), 'r+') as counter_file:
+    count = int(counter_file.readline())
+    print(hotp.at(count))
+    #
+    counter_file.seek(0)
+    counter_file.write(str(count+1))
+    counter_file.truncate()

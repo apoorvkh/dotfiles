@@ -1,8 +1,0 @@
-#!/usr/bin/env zsh
-
-mkdir "~/.gnupg/exports"
-
-gpg --export --armor mail@apoorvkh.com > ~/.gnupg/exports/mail@apoorvkh.com.pub.asc
-gpg --export-secret-keys --armor mail@apoorvkh.com > ~/.gnupg/exports/mail@apoorvkh.com.priv.asc
-gpg --export-secret-subkeys --armor mail@apoorvkh.com > ~/.gnupg/exports/mail@apoorvkh.com.sub_priv.asc
-gpg --export-ownertrust > ~/.gnupg/exports/ownertrust.txt
