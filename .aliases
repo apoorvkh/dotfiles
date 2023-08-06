@@ -7,7 +7,7 @@ alias ps-owner="ps -o user= -p"
 # Standard bash commands
 alias rm="command rm -rf"
 alias cp="command cp -R"
-alias ls="command ls -lhH --color=auto"
+alias ls="command ls -lhHa --color=auto"
 alias lsa="ls -a"
 alias mkdir="command mkdir -p"
 alias grep="command grep --color=auto"
