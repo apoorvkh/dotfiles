@@ -27,7 +27,7 @@ set_cache() {
     export NLTK_DATA=$1/nltk_data
     export TORCH_HOME=$1/torch
     export HF_HOME=$1/huggingface
-    export CONDA_PKGS_DIRS=$1/conda/pkgs
+    export CONDA_PKGS_DIRS=$1/conda_pkgs
 }
 
 set_cache $HOME/.cache

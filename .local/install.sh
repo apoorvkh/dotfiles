@@ -14,7 +14,7 @@ unset DOTFILES_BRANCH
 
 # micromamba
 
-export MAMBA_ROOT_PREFIX="$HOME"
+export MAMBA_ROOT_PREFIX="$HOME/.local/micromamba"
 export CONDA_PKGS_DIRS=$HOME/.cache/conda/pkgs
 eval "$(~/.local/bin/micromamba shell hook -s posix)"
 micromamba create -f ~/.environment.yml
