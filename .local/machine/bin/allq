@@ -1,0 +1,28 @@
+#!/bin/bash
+
+format="%1T %8i %12j %9u %.5C %.12l"
+header="NAME         USER       CPUS     WALLTIME"
+
+all_partitions="gpu gpu-he 3090-gcondo a6000-gcondo"
+if [ -n $1 ]; then
+	partitions=`compgen -W "$all_partitions" -- $1`
+	if [ $? -eq 1 ]; then
+		echo "Unknown partition '$1'"
+		exit 1
+	fi
+else
+	partitions="$all_partitions"
+fi
+
+bold=`tput bold`
+normal=`tput sgr0`
+
+for partition in $partitions
+do
+	echo "${bold}${partition}${normal}" 
+	echo "RUNNING    $header    REMAINING NODES"
+	squeue -h -p $partition --format="$format %.12L %N" -t R -S L
+	echo "PENDING    $header    EST.START REASON"
+	squeue -h -p $partition --format="$format %.12S %R" -t PD -S S
+	echo ""
+done

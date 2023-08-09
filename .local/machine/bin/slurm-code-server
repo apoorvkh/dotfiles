@@ -1,0 +1,1 @@
+sbatch ~/.local/machine/bin/code-server.batch

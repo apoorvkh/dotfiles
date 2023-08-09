@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+#SBATCH -J code-server -o "slurm-code-server.out"
+#SBATCH -p batch -N 1-1 -n 1 --time=7-00:00:00
+#SBATCH --constraint cascade --cpus-per-task 8 --mem 64G
+
+export EXTENSIONS_GALLERY='{"serviceUrl": "https://marketplace.visualstudio.com/_apis/public/gallery"}'
+
+cd ~
+cloudflared tunnel run ccv &
+/gpfs/runtime/opt/code-server/4.11.0/bin/code-server
