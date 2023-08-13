@@ -1,0 +1,11 @@
+N_GPU=${1:-1}
+N_CPU=$((4*$N_GPU))
+
+if [ -z "$2" ]
+then CONS=""
+else CONS="--constraint $2"
+fi
+
+unset SLURM_MEM_PER_NODE
+
+salloc -J interact -p gpu-he -N 1-1 -n 1 --time 1-00:00:00 $CONS --gpus $N_GPU --cpus-per-task $N_CPU --mem-per-cpu 8G srun --pty zsh
