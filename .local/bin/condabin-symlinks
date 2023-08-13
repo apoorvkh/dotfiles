@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+for binary in "git" "exa" "bat" "curl" "tar" "zip" "zsh" "ffmpeg" "rich" "gdown" "tensorboard"; do
+    CONDA_PATH=~/.local/micromamba/envs/_base/bin/$binary
+    LOCAL_PATH=~/.local/bin/$binary
+    if [ -x $CONDA_PATH ] && [ ! -x $LOCAL_PATH ]; then
+        ln -s $CONDA_PATH $LOCAL_PATH
+    fi
+done

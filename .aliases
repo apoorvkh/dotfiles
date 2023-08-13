@@ -1,14 +1,15 @@
+alias cat="bat --paging=never"
 alias conda="micromamba"
 alias d="docker"
 alias g="git"
 alias nv="nvidia-smi"
 alias ps-owner="ps -o user= -p"
 
+
 # Standard bash commands
 alias rm="command rm -rf"
 alias cp="command cp -R"
-alias ls="command ls -lhHat --color=auto"
-alias lsa="ls -a"
+alias ls="command exa -lha --color=auto"
 alias mkdir="command mkdir -p"
 alias grep="command grep --color=auto"
 alias df="command df -h --type btrfs --type ext4 --type ext3 --type ext2 --type vfat --type iso9660 --type xfs --type fuseblk"

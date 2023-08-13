@@ -20,6 +20,7 @@ eval "$(~/.local/bin/micromamba shell hook -s posix)"
 micromamba create -f ~/.environment.yml
 micromamba clean --all --quiet --yes
 micromamba activate _base
+source ~/.local/bin/condabin-symlinks
 
 # oh-my-zsh
 curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh | ZSH=~/.oh-my-zsh KEEP_ZSHRC=yes CHSH=no RUNZSH=no bash -s --
